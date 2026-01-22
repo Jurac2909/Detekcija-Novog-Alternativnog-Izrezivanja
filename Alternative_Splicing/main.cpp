@@ -20,7 +20,6 @@ void TraverseString(string &str, int &Start_Coord, int &End_Coord)
           }
           else if (str[i] == 'M' or str[i] == 'S' ) {
    
-              // Print word
               Start_Coord += stoi(word);
               word = "";
           }
