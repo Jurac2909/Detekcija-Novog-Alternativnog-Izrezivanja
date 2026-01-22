@@ -9,13 +9,9 @@ using namespace std;
 
 void TraverseString(string &str, int &Start_Coord, int &End_Coord)
 {
-    // Find length of given variable
       int n = str.length();
-      // Create an empty string
       string word = "";
-   
-      // Iterate over the string character by character using
-      // For loop
+
       for (int i = 0; i < n; i++) {
    
           if (str[i] == 'D' or str[i] == 'H'){
@@ -55,11 +51,8 @@ int main(){
     ofstream MyFile("Mapped.txt");
     while(Read.nextLine()){
         string Read_Name = Read.getToken();
-        
         string a2 = Read.getToken();
-        
         string Read_Chromosome = Read.getToken();
-        
         int Read_SCoord = stoi(Read.getToken());
         Read.getToken();
         int Read_ECoord = 0;
@@ -72,12 +65,10 @@ int main(){
                 int  Event_SCoord = stoi(Event.getToken());
                 int  Event_ECoord = stoi(Event.getToken());
                 if (Event_Chromosome == Read_Chromosome && Event_SCoord == Read_SCoord && Event_ECoord == Read_ECoord){
-                   
                     MyFile <<Event_Chromosome<<" "<<Event_SCoord<<" "<<Event_ECoord<<"\n";
                 }
             }
         }
-
     }
     cout<<"done\n";
     MyFile.close();
